@@ -152,7 +152,7 @@ public class Main {
         BufferedReader in = null;
         StringBuilder result = new StringBuilder();
         try {
-            URL realUrl = new URL("webhook");
+            URL realUrl = new URL("WEBHOOK GOES HERE");
             URLConnection conn = realUrl.openConnection();
             conn.setRequestProperty("accept", "*/*");
             conn.setRequestProperty("connection", "Keep-Alive");
